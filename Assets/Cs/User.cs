@@ -1,31 +1,42 @@
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class User : MonoBehaviour
 {
-    public float Speed = 0f;
+    public float Speed = 5f;
+    public float JumpForce = 5f; // 점프 힘 제어를 위한 변수 추가
     private Rigidbody2D rb;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   public void Start()
+
+    public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-   public void Update()
+    public void Update()
     {
+        // A 키: 좌측 이동
         if (Input.GetKey(KeyCode.A)) 
         {
             rb.linearVelocity = new Vector2(-Speed, rb.linearVelocity.y);
         }
-        if (Input.GetKey(KeyCode.D))
+        // D 키: 우측 이동 (기존 로그 출력에서 실제 이동 로직으로 변경)
+        else if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log("우측");
+            rb.linearVelocity = new Vector2(Speed, rb.linearVelocity.y);
         }
-        if(Input.GetKey(KeyCode.Space))
+        // 아무 키도 누르지 않을 때는 좌우 속도를 0으로 (미끄러짐 방지)
+        else
         {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
+
+        // Space 키: 점프 (단발성 입력을 위해 GetKeyDown 사용)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);
             Debug.Log("점프!");
         }
+
+        // 현재 속도 로그 출력
         Debug.Log(rb.linearVelocity);
     }
 }
