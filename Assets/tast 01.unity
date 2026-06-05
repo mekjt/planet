@@ -131,9 +131,7 @@ GameObject:
   - component: {fileID: 408383430}
   - component: {fileID: 408383429}
   m_Layer: 6
-  m_Layer: 6
   m_Name: dast
-  m_TagString: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,11 +253,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0646, y: -3.2646, z: 0}
   m_LocalScale: {x: 25.883228, y: 4.7166057, z: 1}
-  m_LocalPosition: {x: -0.0646, y: -3.2646, z: 0}
-  m_LocalScale: {x: 25.883228, y: 4.7166057, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 714737360}
   m_Children:
   - {fileID: 714737360}
   m_Father: {fileID: 0}
@@ -414,7 +408,6 @@ GameObject:
   - component: {fileID: 1722757309}
   - component: {fileID: 1722757308}
   - component: {fileID: 1722757311}
-  - component: {fileID: 1722757311}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -553,7 +546,6 @@ GameObject:
   - component: {fileID: 1871266513}
   - component: {fileID: 1871266512}
   - component: {fileID: 1871266516}
-  - component: {fileID: 1871266516}
   m_Layer: 0
   m_Name: haed
   m_TagString: Untagged
@@ -577,7 +569,6 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 3
-  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -588,7 +579,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
   m_Constraints: 4
 --- !u!61 &1871266513
 BoxCollider2D:
@@ -705,7 +695,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.77, y: 0.75, z: 0}
-  m_LocalPosition: {x: -3.77, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -725,63 +714,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::User
   Speed: 5
   JumpForce: 5
---- !u!1001 &2285791369017250657
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.06198
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.15149
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 303219205797146110, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3467163837181796627, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
-      propertyPath: m_Name
-      value: Prefabs
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8d32e7d10b38f194e8a2eaa4ffb55f09, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -789,4 +721,3 @@ SceneRoots:
   - {fileID: 1722757310}
   - {fileID: 1871266515}
   - {fileID: 408383431}
-  - {fileID: 2285791369017250657}
