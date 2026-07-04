@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;//유니티 엔진 사용
 
 public class User : MonoBehaviour //유저 클래스 생성
@@ -5,12 +6,12 @@ public class User : MonoBehaviour //유저 클래스 생성
     public float Speed = 5f; // 이동 속도를 저장하는 변수, 기본값은 5
     public float JumpForce = 5f; // 점프할 때 사용할 힘, 기본값은 5
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트를 저장할 변수
+    public int Hartparsant = 10;
 
 
     public void Start() //공공의 클래스 시작생성 시작할떄 한번만 가동
     {
         rb = GetComponent<Rigidbody2D>(); // 이 오브젝트의 Rigidbody2D를 찾아 rb에 저장
-
     }
 
     public void Update() // 매 프레임마다 실행
@@ -38,7 +39,7 @@ public class User : MonoBehaviour //유저 클래스 생성
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);// 현재 좌우 속도는 유지하고 위쪽 속도를 JumpForce로 설정
             Debug.Log("점프!");//디버그 로그에 점프 출력
         }
-
+        Console.WriteLine(Hartparsant);
 
 
 
@@ -47,4 +48,5 @@ public class User : MonoBehaviour //유저 클래스 생성
     {
         return Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
     }
+
 }
