@@ -44,7 +44,7 @@ public class User : MonoBehaviour //유저 클래스 생성
         {
             Application.Quit();
         }
-        Console.WriteLine(Hartparsant);
+        Debug.Log(Hartparsant);
 
 
 
