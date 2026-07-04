@@ -1,21 +1,16 @@
-using System;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
 
-
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
-    public int obstacledam = 1;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        GetComponent<User>();  
-    }
+    public int obstacleDam = 1;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Hartparsant = HP - obstacledam;
-        Console.WriteLine(HP);
+        User user = collision.gameObject.GetComponent<User>();
+
+        if (user != null)
+        {
+            user.Hartparsant -= obstacleDam;
+        }
     }
 }

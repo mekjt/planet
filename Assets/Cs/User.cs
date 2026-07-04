@@ -1,5 +1,6 @@
 using System;
-using UnityEngine;//유니티 엔진 사용
+using UnityEngine;
+using UnityEngine.Android;//유니티 엔진 사용
 
 public class User : MonoBehaviour //유저 클래스 생성
 {
@@ -38,6 +39,10 @@ public class User : MonoBehaviour //유저 클래스 생성
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);// 현재 좌우 속도는 유지하고 위쪽 속도를 JumpForce로 설정
             Debug.Log("점프!");//디버그 로그에 점프 출력
+        }
+        if (Hartparsant <= 0)
+        {
+            Application.Quit();
         }
         Console.WriteLine(Hartparsant);
 
