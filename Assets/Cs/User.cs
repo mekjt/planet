@@ -8,6 +8,7 @@ public class User : MonoBehaviour //유저 클래스 생성
     public float JumpForce = 5f; // 점프할 때 사용할 힘, 기본값은 5
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트를 저장할 변수
     public int Hartparsant = 10;
+    public int MaxHartparsant = 20;
 
 
     public void Start() //공공의 클래스 시작생성 시작할떄 한번만 가동
@@ -18,7 +19,7 @@ public class User : MonoBehaviour //유저 클래스 생성
     public void Update() // 매 프레임마다 실행
     {
         
-        
+        //------------여기서부터 조작키
         if (Input.GetKey(KeyCode.A)) // a키를 눌렀을떄 안에 있는 코드를 실행함
         {
             rb.linearVelocity = new Vector2(-Speed, rb.linearVelocity.y);// 왼쪽으로 이동하고 Y축 속도(점프/낙하)는 유지
@@ -40,10 +41,20 @@ public class User : MonoBehaviour //유저 클래스 생성
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);// 현재 좌우 속도는 유지하고 위쪽 속도를 JumpForce로 설정
             Debug.Log("점프!");//디버그 로그에 점프 출력
         }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Hartparsant = (Hartparsant + 1);
+        }
+        //--------------------여기서 부터 체력
         if (Hartparsant <= 0)
         {
             Application.Quit();
         }
+        if (Hartparsant > MaxHartparsant)
+        {
+            Hartparsant = MaxHartparsant;
+        }
+        
 
 
 
