@@ -45,6 +45,10 @@ public class User : MonoBehaviour //유저 클래스 생성
         {
             Hartparsant = (Hartparsant + 1);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+        }
         //--------------------여기서 부터 체력
         if (Hartparsant <= 0)
         {
