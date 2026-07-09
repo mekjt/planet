@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.Android;//유니티 엔진 사용
 
@@ -9,6 +9,7 @@ public class User : MonoBehaviour //유저 클래스 생성
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트를 저장할 변수
     public int Hartparsant = 10;
     public int MaxHartparsant = 20;
+    public Resources resources;
 
 
     public void Start() //공공의 클래스 시작생성 시작할떄 한번만 가동
