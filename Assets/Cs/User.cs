@@ -9,8 +9,7 @@ public class User : MonoBehaviour //유저 클래스 생성
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트를 저장할 변수
     public int Hartparsant = 10;
     public int MaxHartparsant = 20;
-    public Resources resources;
-
+    public NewMonoBehaviourScript resources;
 
     public void Start() //공공의 클래스 시작생성 시작할떄 한번만 가동
     {
@@ -46,10 +45,6 @@ public class User : MonoBehaviour //유저 클래스 생성
         {
             Hartparsant = (Hartparsant + 1);
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-
-        }
         //--------------------여기서 부터 체력
         if (Hartparsant <= 0)
         {
@@ -58,6 +53,11 @@ public class User : MonoBehaviour //유저 클래스 생성
         if (Hartparsant > MaxHartparsant)
         {
             Hartparsant = MaxHartparsant;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            resources.Mining();
+            Console.WriteLine(reDamage);
         }
         
 
