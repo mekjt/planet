@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   resourcesname: 
+  TakeDamage: 1
   resourcesType: 4
   resourceshp: 100
   resourcesdropcount: 0
@@ -1670,6 +1671,7 @@ MonoBehaviour:
   JumpForce: 5
   Hartparsant: 10
   MaxHartparsant: 20
+  resources: {fileID: 223504741}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

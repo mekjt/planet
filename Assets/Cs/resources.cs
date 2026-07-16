@@ -7,7 +7,7 @@ using UnityEngine;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     public string resourcesname;
-    public int TakeDamage = 1;
+    public int reDamage = 1;
 
     public enum ResourcesType //열거형으로 광물의 타입(성질)을 표기함
     {
@@ -23,7 +23,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public int resourcesdropcount;
     public void Mining()
     {
-        resourceshp = resourceshp - TakeDamage;
+        resourceshp = resourceshp - reDamage;
         if(resourceshp <= 0) 
         {
             resourcesdropcount = 100;
